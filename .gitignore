@@ -1,0 +1,52 @@
+# ====================================================================
+# 1. FILE THỰC THI (BINARIES) & OBJECT FILES
+# ====================================================================
+# Loại bỏ tất cả các file object compiled (.o) và assembler (.s)
+*.o
+*.obj
+*.s
+*.gch
+
+# Loại bỏ các file thư viện liên kết tĩnh và động
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Loại bỏ các file thực thi không có đuôi (Đặc trưng của Linux)
+# Bạn có thể chỉ định tên file thực thi cụ thể của bạn ở đây để chắc chắn, ví dụ:
+# my_program
+# app
+
+# ====================================================================
+# 2. HỆ THỐNG BUILD (MAKEFILE, CMAKE, SCONS)
+# ====================================================================
+# Nếu bạn dùng CMake
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# ====================================================================
+# 3. DEBUGGER & LOGS
+# ====================================================================
+# Các file dump cores hoặc file log khi chương trình crash
+core
+*.log
+*.out
+
+# File cấu hình của GDB
+.gdb_history
+
+# ====================================================================
+# 4. IDE & EDITOR (Nếu bạn có dùng)
+# ====================================================================
+.vscode/
+.CLion*/
+cmake-build-*/
+.idea/
+*.swp
+*~

@@ -1,0 +1,42 @@
+Kiểm tra cron, systemd timers, startup scripts:
+
+crontab -l
+sudo crontab -l
+systemctl list-timers --all
+grep -R "172.10.6.9" /etc /home /root 2>/dev/null
+Kiểm tra logs (cẩn thận: logs có thể đã bị xóa):
+
+sudo journalctl -n 200
+sudo grep -R "ssh" /var/log 2>/dev/null | tail -n 50
+Kiểm tra file lạ trong /tmp
+
+ls -l /tmp
+
+🔥 Kiểm tra máy
+
+Xem các file shell startup của root:
+
+cat /root/.bashrc
+cat /root/.profile
+cat /etc/profile
+cat /etc/bash.bashrc
+ls /etc/profile.d/
+
+
+Kiểm tra crontab (root và user):
+
+crontab -l
+sudo crontab -l
+cat /etc/crontab
+ls /etc/cron.d/
+
+
+Kiểm tra process đang chạy ncat:
+
+ps aux | grep -E "nc|ncat"
+ss -ntp
+
+
+Tìm file hoặc lệnh chứa IP hacker:
+
+grep -R "172.10.6.9" /
